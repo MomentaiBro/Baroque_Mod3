@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body { 
+    background: black;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 425px;
+    background: snow;
+    z-index: 100;
+    position:fixed;
+    left: 0px;
+    top: 0px;;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    align-content: space-between;
+    transform: translateX(-384px);
+
+}
+
+.openClose {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+
+}
+
+#openbtn {
+    transform: scale(2);
+    margin: 15px;
+}
+
+#openbtn:hover {
+    color: rgb(76, 72, 119);
+    cursor: pointer;
+}
+
+#closebtn {
+    transform: scale(2);
+    margin: 15px
+}
+
+#closebtn:hover {
+    color: rgb(76, 72, 119);
+    cursor: pointer;
+}
+
+.content {
+    border: 1px solid white;
+    width: 375px;
+    height: 90vh;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    color: black;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 65px;
+    width: fit-content;
+    
+}
+
+#artist, #information, #date, #location{
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+
+#location {
+    margin-bottom: 25px;
+}
+
+
+#information {
+    width: fit-content;
+    color: black;
+    font-family: 'Six Caps', sans-serif;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+
+#info-content{
+    font-size: 14px;
+    font-family: 'Goudy Bookletter 1911', serif;
+    padding: 5px;
+}
+
+.photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+}
+
+img {
+    height: 100%;
+    width: auto; 
+    position: absolute;
+    background: transparent;
+    will-change: auto;
+}
+
+#lights{
+    will-change: descend;
+    animation: descend 13s ease-in;
+}
+
+#angel {
+    will-change: angeliDescend;
+    animation: angelicDescend 20s ease-in;
+    
+}
+#arrow {
+    animation: descend 21s ease;
+}
+#rock {
+    transform: translateZ(-2);
+    animation: appear 10s ease;
+}
+#teresa{
+    animation: ascend 15s ease;
+}
+
+@keyframes descend {
+    0% { transform: translateY(-600px);
+        opacity: 0;}
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        filter: saturate(2), brightness(2);
+    }
+}
+
+@keyframes angelicDescend {
+    0% { 
+        transform: translateY(-600px);
+    
+    }
+
+    80% {
+        transform: translateY(10px)
+    }
+    90% {
+        transform: translateY(5px)
+    }
+    
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ascend {
+    0% { transform: translateY(600px);}
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear {
+    0% { opacity: 0;}
+    80%, 90% {opacity: 1;}
+    100% {
+        opacity: 1;
+    }
+}
+
