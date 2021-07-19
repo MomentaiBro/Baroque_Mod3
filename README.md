@@ -1,6 +1,6 @@
 # Baroque_Mod3
 
-# The Ecstacy of St. Theresa
+# The Ecstasy of St. Teresa
 
 This is a project I made for mod 3 of my time at Flatiron School. I wanted to do something more artistic instead of building a simple, traditional website. 
 
